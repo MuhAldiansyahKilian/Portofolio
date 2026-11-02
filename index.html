@@ -1,0 +1,1704 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muh Aldiansyah Kilian - Portofolio Profesional</title>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            },
+            colors: {
+              navy: {
+                50: "#f0f6fe",
+                100: "#ddea9f",
+                800: "#1e293b",
+                900: "#0f172a",
+                950: "#090d16",
+              },
+              accent: {
+                DEFAULT: "#0ea5e9",
+                light: "#38bdf8",
+                dark: "#0284c7",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0ea5e9;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .dark .glass-card {
+        background: rgba(30, 41, 59, 0.7);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* Typing Cursor Animation */
+      .typing-cursor::after {
+        content: "|";
+        animation: blink 1s infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 dark:bg-navy-900 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300"
+  >
+    <!-- NAVIGATION HEADER -->
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 px-4 sm:px-8"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center bg-white/80 dark:bg-navy-800/80 backdrop-blur-md rounded-2xl px-6 py-3 shadow-lg border border-slate-200/50 dark:border-slate-700/50"
+      >
+        <!-- Brand Logo / Name -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div
+            class="w-12 h-12 rounded-xl bg-gradient-to-tr from-accent-dark to-accent-light flex items-center justify-center text-white font-extrabold text-lg shadow-md group-hover:scale-105 transition-transform"
+          >
+            MAK
+          </div>
+          <div>
+            <span
+              class="font-bold text-lg tracking-tight block text-navy-900 dark:text-white leading-tight"
+              >MUH ALDIANSYAH KILIAN</span
+            >
+            <span
+              class="text-xs text-accent font-medium tracking-wider uppercase block"
+              >Administrasi Bisnis</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+          <a href="#about" class="hover:text-accent transition-colors"
+            >Tentang Saya</a
+          >
+          <a href="#experience" class="hover:text-accent transition-colors"
+            >Pengalaman</a
+          >
+          <a href="#projects" class="hover:text-accent transition-colors"
+            >Proyek</a
+          >
+          <a href="#skills" class="hover:text-accent transition-colors"
+            >Keahlian</a
+          >
+          <a href="#credentials" class="hover:text-accent transition-colors"
+            >Sertifikasi</a
+          >
+          <a href="#contact" class="hover:text-accent transition-colors"
+            >Kontak</a
+          >
+        </nav>
+
+        <!-- Right Controls (Theme Switcher + Mobile Menu Button) -->
+        <div class="flex items-center gap-3">
+          <button
+            id="themeToggle"
+            class="p-2.5 rounded-xl bg-slate-100 dark:bg-navy-900 text-slate-700 dark:text-slate-300 hover:text-accent dark:hover:text-accent transition-colors"
+            title="Beralih Mode Tema"
+          >
+            <i id="themeIcon" class="fa-solid fa-moon"></i>
+          </button>
+
+          <a
+            href="#contact"
+            class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-accent-dark to-accent text-white px-4 py-2.5 rounded-xl text-sm font-semibold shadow-md hover:shadow-accent/20 hover:opacity-95 transition-all"
+          >
+            <i class="fa-solid fa-paper-plane"></i> Hubungi Saya
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-navy-900 text-slate-700 dark:text-slate-300"
+          >
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden max-w-7xl mx-auto mt-2 bg-white dark:bg-navy-800 rounded-2xl p-6 shadow-xl border border-slate-200 dark:border-slate-700 flex flex-col gap-4 text-center font-medium"
+      >
+        <a
+          href="#about"
+          class="mobile-nav-link py-2 border-b border-slate-100 dark:border-slate-700"
+          >Tentang Saya</a
+        >
+        <a
+          href="#experience"
+          class="mobile-nav-link py-2 border-b border-slate-100 dark:border-slate-700"
+          >Pengalaman</a
+        >
+        <a
+          href="#projects"
+          class="mobile-nav-link py-2 border-b border-slate-100 dark:border-slate-700"
+          >Proyek</a
+        >
+        <a
+          href="#skills"
+          class="mobile-nav-link py-2 border-b border-slate-100 dark:border-slate-700"
+          >Keahlian</a
+        >
+        <a
+          href="#credentials"
+          class="mobile-nav-link py-2 border-b border-slate-100 dark:border-slate-700"
+          >Sertifikasi</a
+        >
+        <a href="#contact" class="mobile-nav-link py-2">Kontak</a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      id="hero"
+      class="min-h-screen pt-32 pb-20 px-4 sm:px-8 flex items-center justify-center relative overflow-hidden"
+    >
+      <!-- Background Glow Effects -->
+      <div
+        class="absolute top-1/4 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10"
+      >
+        <!-- Text Intro (Left - 7 cols) -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent dark:text-accent-light text-sm font-semibold mb-6 border border-accent/20"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+            ></span>
+            D4 Administrasi Bisnis (IPK 3.33)
+          </div>
+
+          <h1
+            class="text-4xl sm:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight mb-4"
+          >
+            Halo, Saya <br class="hidden sm:block" />
+            <span class="gradient-text">Muh Aldiansyah Kilian</span>
+          </h1>
+
+          <div
+            class="text-xl sm:text-2xl font-medium text-slate-600 dark:text-slate-300 mb-6 h-8"
+          >
+            <span
+              id="typingText"
+              class="typing-cursor text-slate-700 dark:text-slate-200 font-semibold"
+            ></span>
+          </div>
+
+          <p
+            class="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0"
+          >
+            Spesialis Dukungan Administrasi Perkantoran, Pengolahan Data
+            Spreadsheet, Kearsipan Digital, dan Sistem Informasi Bisnis.
+            Pengalaman Internship di <b>PT PLN (Persero) UP3 Makassar Selatan</b>.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <a
+              href="#contact"
+              class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-accent-dark to-accent text-white font-semibold shadow-lg shadow-accent/25 hover:shadow-accent/40 hover:-translate-y-0.5 transition-all flex items-center gap-2"
+            >
+              <i class="fa-solid fa-paper-plane"></i> Hubungi Langsung
+            </a>
+          <button onclick="downloadPDF()" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition duration-200 shadow-md">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Simpan Ringkasan CV
+          </button>
+
+          <script>
+          function downloadPDF() {
+              const link = document.createElement('a');
+              link.href = 'CV_ATS_MUH ALDIANSYAH KILIAN.pdf'; // Jalur file PDF Anda
+              link.download = 'CV_ATS_MUH ALDIANSYAH KILIAN.pdf'; // Nama file hasil unduhan
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+          }
+          </script>
+          </div>
+
+          <!-- Quick Contacts Bar -->
+          <div
+            class="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-slate-600 dark:text-slate-400"
+          >
+            <a
+              href="mailto:aldiansyahkilian@gmail.com"
+              class="hover:text-accent flex items-center gap-2 transition-colors"
+            >
+              <i class="fa-solid fa-envelope text-accent"></i>
+              aldiansyahkilian@gmail.com
+            </a>
+            <a
+              href="https://wa.me/628875269722"
+              target="_blank"
+              class="hover:text-emerald-500 flex items-center gap-2 transition-colors"
+            >
+              <i class="fa-brands fa-whatsapp text-emerald-500"></i> 08875269722
+            </a>
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-red-500"></i> Makassar,
+              Sulawesi Selatan
+            </span>
+          </div>
+        </div>
+
+        <!-- Avatar & Quick Stat Cards (Right - 5 cols) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+            <!-- Main Visual Box -->
+            <div
+              class="bg-gradient-to-br from-navy-800 to-navy-950 p-8 rounded-3xl border border-slate-700 shadow-2xl relative overflow-hidden text-white"
+            >
+              <div
+                class="absolute -right-10 -bottom-10 w-40 h-40 bg-accent/20 rounded-full blur-2xl"
+              ></div>
+
+              <div class="flex items-center gap-4 mb-6">
+                <div
+                  class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-accent-dark to-accent flex items-center justify-center text-3xl font-extrabold text-white shadow-lg"
+                >
+                  MAK
+                </div>
+                <div>
+                  <h3 class="font-bold text-xl text-white">
+                    Muh Aldiansyah Kilian
+                  </h3>
+                  <p class="text-xs text-accent-light font-medium">
+                    Administrasi Bisnis (D4)
+                  </p>
+                  <p class="text-xs text-slate-400 mt-0.5">
+                    Politeknik Negeri Ujung Pandang
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <div
+                  class="bg-navy-900/80 p-4 rounded-xl border border-slate-700/60 flex items-center gap-4"
+                >
+                  <div
+                    class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center"
+                  >
+                    <i class="fa-solid fa-building text-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-400">Pengalaman Terakhir</p>
+                    <p class="text-sm font-semibold text-slate-200">
+                      PT PLN (Persero) UP3 Makassar
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-navy-900/80 p-4 rounded-xl border border-slate-700/60 flex items-center gap-4"
+                >
+                  <div
+                    class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center"
+                  >
+                    <i class="fa-solid fa-keyboard text-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-400">Kecepatan Ketik</p>
+                    <p class="text-sm font-semibold text-slate-200">
+                      10 Jari Presisi & Data Entry
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-navy-900/80 p-4 rounded-xl border border-slate-700/60 flex items-center gap-4"
+                >
+                  <div
+                    class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center"
+                  >
+                    <i class="fa-solid fa-globe text-lg"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-400">
+                      Tugas Akhir Berbasis Web
+                    </p>
+                    <p class="text-sm font-semibold text-slate-200">
+                      Sistem Informasi Masjid Darul Muflihin
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Badges Footer -->
+              <div
+                class="mt-6 pt-4 border-t border-slate-700/60 flex justify-between items-center text-xs text-slate-400"
+              >
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-solid fa-shield-halved text-accent"></i>
+                  Berkompetensi Sertifikasi</span
+                >
+                <span class="text-emerald-400 font-medium"
+                  >IPK 3.33 / 4.00</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section
+      id="about"
+      class="py-20 px-4 sm:px-8 bg-white dark:bg-navy-800/50 transition-colors"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold text-accent uppercase tracking-widest mb-2"
+          >
+            Tentang Saya
+          </h2>
+          <h3
+            class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white"
+          >
+            Profil & Profesionalisme
+          </h3>
+          <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Main Description -->
+          <div
+            class="lg:col-span-7 space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed"
+          >
+            <p class="text-lg font-medium text-slate-800 dark:text-slate-100">
+              Saya adalah lulusan Program Studi Sarjana Terapan (D4)
+              Administrasi Bisnis dari Politeknik Negeri Ujung Pandang dengan
+              <b>IPK 3,33</b>.
+            </p>
+            <p>
+              Selama studi, saya dibekali pemahaman mendalam terkait manajemen
+              perkantoran modern, kesekretariatan, pengelolaan arsip digital
+              (Electronic Filing System), korespondensi bisnis Bahasa Indonesia
+              & Inggris, serta manajemen operasional perusahaan.
+            </p>
+            <p>
+              Didukung oleh latar belakang pendidikan SMK di bidang
+              <b>Teknik Komputer dan Jaringan (TKJ)</b>, saya memiliki pemahaman
+              teknis komputer yang kuat serta mampu menghubungkan sistem
+              teknologi informasi dengan kebutuhan operasional bisnis secara
+              efisien.
+            </p>
+
+            <!-- Core Value Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+              <div
+                class="p-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700/80"
+              >
+                <i class="fa-solid fa-list-check text-2xl text-accent mb-2"></i>
+                <h4 class="font-bold text-slate-900 dark:text-white text-sm">
+                  Teliti & Terstruktur
+                </h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Verifikasi kelengkapan dokumen & verifikasi TTD secara cermat.
+                </p>
+              </div>
+              <div
+                class="p-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700/80"
+              >
+                <i class="fa-solid fa-headset text-2xl text-accent mb-2"></i>
+                <h4 class="font-bold text-slate-900 dark:text-white text-sm">
+                  Pelayanan Prima
+                </h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Komunikasi santun & berorientasi kepuasan mitra/pelanggan.
+                </p>
+              </div>
+              <div
+                class="p-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700/80"
+              >
+                <i
+                  class="fa-solid fa-people-group text-2xl text-accent mb-2"
+                ></i>
+                <h4 class="font-bold text-slate-900 dark:text-white text-sm">
+                  Kerja Sama Tim
+                </h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Mudah beradaptasi dalam lingkungan kerja profesional.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Info Checklist Card -->
+          <div class="lg:col-span-5">
+            <div
+              class="bg-slate-50 dark:bg-navy-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg space-y-4"
+            >
+              <h4
+                class="text-lg font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-slate-800"
+              >
+                Informasi Kunci
+              </h4>
+
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-slate-500 dark:text-slate-400"
+                  >Pendidikan Akhir</span
+                >
+                <span
+                  class="font-semibold text-slate-800 dark:text-slate-200 text-right"
+                  >D4 Administrasi Bisnis</span
+                >
+              </div>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-slate-500 dark:text-slate-400"
+                  >Perguruan Tinggi</span
+                >
+                <span
+                  class="font-semibold text-slate-800 dark:text-slate-200 text-right"
+                  >Politeknik Negeri Ujung Pandang</span
+                >
+              </div>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-slate-500 dark:text-slate-400"
+                  >IPK Kelulusan</span
+                >
+                <span class="font-bold text-emerald-500 text-right"
+                  >3,33 / 4,00</span
+                >
+              </div>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-slate-500 dark:text-slate-400"
+                  >Keahlian Mengetik</span
+                >
+                <span
+                  class="font-semibold text-slate-800 dark:text-slate-200 text-right"
+                  >Typing 10 Jari Cepat</span
+                >
+              </div>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-slate-500 dark:text-slate-400"
+                  >Kemampuan Bahasa</span
+                >
+                <span
+                  class="font-semibold text-slate-800 dark:text-slate-200 text-right"
+                  >Indonesia & Inggris (TOEFL)</span
+                >
+              </div>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-slate-500 dark:text-slate-400"
+                  >Domisili Utama</span
+                >
+                <span
+                  class="font-semibold text-slate-800 dark:text-slate-200 text-right"
+                  >Makassar, Sulawesi Selatan</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE SECTION -->
+    <section id="experience" class="py-20 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold text-accent uppercase tracking-widest mb-2"
+          >
+            Pengalaman Kerja
+          </h2>
+          <h3
+            class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white"
+          >
+            Rekam Jejak Profesional
+          </h3>
+          <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Experience Card -->
+        <div
+          class="max-w-4xl mx-auto bg-white dark:bg-navy-800 rounded-3xl p-8 sm:p-10 border border-slate-200 dark:border-slate-700 shadow-xl relative overflow-hidden"
+        >
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-bl-full pointer-events-none"
+          ></div>
+
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-700"
+          >
+            <div>
+              <div
+                class="inline-block px-3 py-1 rounded-md bg-blue-500/10 text-accent font-semibold text-xs mb-2"
+              >
+                Ketenagalistrikan / BUMN Support
+              </div>
+              <h4 class="text-2xl font-bold text-slate-900 dark:text-white">
+                Admin Sub Bidang Konstruksi
+              </h4>
+              <h5
+                class="text-lg font-semibold text-accent-dark dark:text-accent-light mt-1"
+              >
+                PT PLN (Persero) UP3 Makassar Selatan
+              </h5>
+            </div>
+            <div class="sm:text-right">
+              <span
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 dark:bg-navy-900 font-semibold text-xs text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
+              >
+                <i class="fa-regular fa-calendar-alt text-accent"></i> Feb 2026
+                – Mei 2026
+              </span>
+              <p class="text-xs text-slate-400 mt-1">
+                Kota Makassar, Sulawesi Selatan
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 space-y-4 text-slate-600 dark:text-slate-300">
+            <p class="text-sm sm:text-base font-medium">
+              Bertanggung jawab atas kelancaran seluruh operasional administrasi
+              pada Sub Bidang Konstruksi, memantau alur dokumen vendor, serta
+              mendukung fungsi koordinasi proyek lapangan.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div
+                class="p-4 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700/60"
+              >
+                <div
+                  class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white text-sm mb-2"
+                >
+                  <i class="fa-solid fa-folder-tree text-accent"></i> Monitoring
+                  Dokumen Via Spreadsheet
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Memantau dan mencatat lalu lintas dokumen masuk & keluar
+                  seperti surat permohonan, addendum kontrak, dan berkas tagihan
+                  vendor secara presisi.
+                </p>
+              </div>
+
+              <div
+                class="p-4 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700/60"
+              >
+                <div
+                  class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white text-sm mb-2"
+                >
+                  <i class="fa-solid fa-file-circle-check text-accent"></i>
+                  Verifikasi & Otentikasi Berkas
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Melakukan pemeriksaan kelengkapan berkas tagihan, verifikasi
+                  syarat administratif, serta validasi tanda tangan dari
+                  pihak-pihak terkait.
+                </p>
+              </div>
+
+              <div
+                class="p-4 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700/60"
+              >
+                <div
+                  class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white text-sm mb-2"
+                >
+                  <i class="fa-solid fa-box-archive text-accent"></i> Digital &
+                  Physical Archiving
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Mengelola sistem pengarsipan fisik maupun digital berbasis
+                  pemindaian (scanning) untuk kemudahan pencarian kembali data
+                  (*data retrieval*).
+                </p>
+              </div>
+
+              <div
+                class="p-4 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700/60"
+              >
+                <div
+                  class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white text-sm mb-2"
+                >
+                  <i class="fa-solid fa-clipboard-check text-accent"></i>
+                  Koordinasi & Pemantauan Lapangan
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Membantu koordinasi pengawas lapangan & vendor melalui
+                  pemeriksaan lokasi kerja, pemantauan progres konstruksi, dan
+                  pencatatan penggunaan material.
+                </p>
+              </div>
+            </div>
+
+            <!-- Key Learnings Tags -->
+            <div class="pt-4 flex flex-wrap gap-2 text-xs">
+              <span
+                class="px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-900 text-slate-600 dark:text-slate-400 font-medium"
+                >Administrasi Konstruksi</span
+              >
+              <span
+                class="px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-900 text-slate-600 dark:text-slate-400 font-medium"
+                >Verifikasi Tagihan Vendor</span
+              >
+              <span
+                class="px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-900 text-slate-600 dark:text-slate-400 font-medium"
+                >Spreadsheet Monitoring</span
+              >
+              <span
+                class="px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-900 text-slate-600 dark:text-slate-400 font-medium"
+                >Budaya Kerja Profesional</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECT SECTION (TUGAS AKHIR) -->
+    <section
+      id="projects"
+      class="py-20 px-4 sm:px-8 bg-white dark:bg-navy-800/50 transition-colors"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold text-accent uppercase tracking-widest mb-2"
+          >
+            Proyek Unggulan
+          </h2>
+          <h3
+            class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white"
+          >
+            Tugas Akhir Sistem Informasi Berbasis Website
+          </h3>
+          <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Main Project Banner -->
+        <div
+          class="bg-gradient-to-br from-navy-900 to-slate-900 text-white rounded-3xl p-8 sm:p-12 border border-slate-700 shadow-2xl"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-6">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-accent/20 text-accent-light text-xs font-bold tracking-wider uppercase"
+              >
+                <i class="fa-solid fa-code"></i> Website Application & Admin
+                System
+              </div>
+
+              <h4
+                class="text-2xl sm:text-3xl font-extrabold text-white leading-tight"
+              >
+                Sistem Informasi Berbasis Website pada Masjid Darul Muflihin
+                Nusa Tamalanrea Indah Makassar
+              </h4>
+
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Perancangan dan pengembangan sistem informasi terpadu yang
+                dirancang khusus untuk memmodernisasi pengelolaan administrasi,
+                penyebaran informasi publik, transparansi keuangan, dan
+                manajemen kegiatan keagamaan secara efisien.
+              </p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs pt-2">
+                <div
+                  class="bg-navy-800/80 p-3 rounded-xl border border-slate-700"
+                >
+                  <i
+                    class="fa-solid fa-bullhorn text-accent text-base mb-1 block"
+                  ></i>
+                  <span class="font-semibold block text-white"
+                    >Publikasi Informasi</span
+                  >
+                  <span class="text-slate-400">Pengumuman & Berita</span>
+                </div>
+                <div
+                  class="bg-navy-800/80 p-3 rounded-xl border border-slate-700"
+                >
+                  <i
+                    class="fa-solid fa-calendar-days text-accent text-base mb-1 block"
+                  ></i>
+                  <span class="font-semibold block text-white"
+                    >Jadwal Kegiatan</span
+                  >
+                  <span class="text-slate-400">Agenda & Peribadatan</span>
+                </div>
+                <div
+                  class="bg-navy-800/80 p-3 rounded-xl border border-slate-700"
+                >
+                  <i
+                    class="fa-solid fa-hand-holding-dollar text-accent text-base mb-1 block"
+                  ></i>
+                  <span class="font-semibold block text-white"
+                    >Manajemen Donasi</span
+                  >
+                  <span class="text-slate-400">Pencatatan Transparan</span>
+                </div>
+              </div>
+
+              <div class="pt-4 flex flex-wrap gap-4">
+                <button
+                  onclick="openProjectModal()"
+                  class="px-6 py-3 rounded-xl bg-accent hover:bg-accent-dark text-white font-semibold text-sm transition-all flex items-center gap-2 shadow-lg shadow-accent/30"
+                >
+                  <i class="fa-solid fa-circle-info"></i> Detail Fitur Lengkap
+                </button>
+              </div>
+            </div>
+
+            <!-- Visual Dashboard Representation -->
+            <div class="lg:col-span-5">
+              <div
+                class="bg-navy-800 rounded-2xl p-6 border border-slate-700 shadow-xl space-y-4"
+              >
+                <div
+                  class="flex items-center justify-between pb-3 border-b border-slate-700"
+                >
+                  <span
+                    class="text-xs font-bold text-slate-300 flex items-center gap-2"
+                  >
+                    <span
+                      class="w-2.5 h-2.5 rounded-full bg-emerald-400"
+                    ></span>
+                    System Overview
+                  </span>
+                  <span class="text-xs text-slate-400">Web Portal Admin</span>
+                </div>
+
+                <div class="space-y-3 text-xs">
+                  <div
+                    class="bg-navy-900 p-3 rounded-lg flex justify-between items-center"
+                  >
+                    <span class="text-slate-300"
+                      ><i class="fa-solid fa-wallet text-emerald-400 mr-2"></i>
+                      Module Keuangan</span
+                    >
+                    <span class="text-emerald-400 font-bold"
+                      >Terverifikasi</span
+                    >
+                  </div>
+                  <div
+                    class="bg-navy-900 p-3 rounded-lg flex justify-between items-center"
+                  >
+                    <span class="text-slate-300"
+                      ><i class="fa-solid fa-images text-blue-400 mr-2"></i>
+                      Galeri Dokumentasi</span
+                    >
+                    <span class="text-blue-400 font-bold">Tersimpan</span>
+                  </div>
+                  <div
+                    class="bg-navy-900 p-3 rounded-lg flex justify-between items-center"
+                  >
+                    <span class="text-slate-300"
+                      ><i
+                        class="fa-solid fa-file-invoice text-purple-400 mr-2"
+                      ></i>
+                      Laporan Transparansi</span
+                    >
+                    <span class="text-purple-400 font-bold">Otomatis</span>
+                  </div>
+                </div>
+
+                <div
+                  class="p-4 bg-accent/10 border border-accent/20 rounded-xl text-center"
+                >
+                  <p class="text-xs text-accent-light font-semibold">
+                    Mendukung Tata Kelola Administrasi Digital Modern
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- SKILLS & COMPETENCIES SECTION -->
+  <section id="skills" class="py-20 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-accent uppercase tracking-widest mb-2">Keahlian Utama</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Kompetensi & Spesialisasi</h3>
+        <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Skill Filter Tabs -->
+      <div class="flex justify-center gap-2 mb-10 flex-wrap">
+        <button onclick="filterSkills('all')" class="skill-tab-btn active px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-accent text-white">Semua Keahlian</button>
+        <button onclick="filterSkills('admin')" class="skill-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-slate-200 dark:bg-navy-800 text-slate-700 dark:text-slate-300">Administrasi</button>
+        <button onclick="filterSkills('tech')" class="skill-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-slate-200 dark:bg-navy-800 text-slate-700 dark:text-slate-300">Software & TI</button>
+        <button onclick="filterSkills('soft')" class="skill-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-slate-200 dark:bg-navy-800 text-slate-700 dark:text-slate-300">Soft Skills</button>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="skillsGrid">
+
+        <!-- Skill Item 1: Typing 10 Jari -->
+        <div class="skill-card admin p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-accent flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-keyboard"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                Ahli (Expert)
+              </span>
+            </div>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-white">Typing 10 Jari & Data Entry</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Pemasukan data teks & angka presisi tinggi tanpa melihat papan ketik dengan kecepatan optimal.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-1 text-emerald-500 text-xs font-medium">
+            <i class="fa-solid fa-circle-check"></i> Penguasaan Penuh & Cepat
+          </div>
+        </div>
+
+        <!-- Skill Item 2: Electronic Filing System -->
+        <div class="skill-card admin p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-box-archive"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-accent/10 text-accent dark:text-accent-light border border-accent/20">
+                Mahir (Advanced)
+              </span>
+            </div>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-white">Electronic Filing System</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Pengelolaan kearsipan digital, proses pemindaian (scanning), dan pengelompokan dokumen terstruktur.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-1 text-accent text-xs font-medium">
+            <i class="fa-solid fa-circle-check"></i> Standar Arsip Digital Perkantoran
+          </div>
+        </div>
+
+        <!-- Skill Item 3: Microsoft Excel & Spreadsheet -->
+        <div class="skill-card tech p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-file-excel"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-accent/10 text-accent dark:text-accent-light border border-accent/20">
+                Mahir (Advanced)
+              </span>
+            </div>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-white">Microsoft Excel & Spreadsheet</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Aplikasi komputer spreadsheet, monitoring tagihan vendor, rumus fungsi, & olah data perkantoran.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-1 text-emerald-600 text-xs font-medium">
+            <i class="fa-solid fa-circle-check"></i> Pengolahan Data & Laporan
+          </div>
+        </div>
+
+        <!-- Skill Item 4: Administrasi Perkantoran -->
+        <div class="skill-card admin p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-clipboard-list"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                Ahli (Expert)
+              </span>
+            </div>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-white">Administrasi Perkantoran</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Korespondensi bisnis, verifikasi kelengkapan berkas tagihan, addendum kontrak, & kesekretariatan.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-1 text-emerald-500 text-xs font-medium">
+            <i class="fa-solid fa-circle-check"></i> Kompetensi Sertifikasi PNUP
+          </div>
+        </div>
+
+        <!-- Skill Item 5: Database & SIM -->
+        <div class="skill-card tech p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                Menengah (Intermediate)
+              </span>
+            </div>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-white">Aplikasi Database & SIM</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Sistem Informasi Manajemen, Word Processing, dan basis data berbasis website.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-1 text-amber-500 text-xs font-medium">
+            <i class="fa-solid fa-circle-check"></i> Berpengalaman Proyek Tugas Akhir
+          </div>
+        </div>
+
+        <!-- Skill Item 6: Public Speaking & Pelayanan -->
+        <div class="skill-card soft p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-accent/10 text-accent dark:text-accent-light border border-accent/20">
+                Mahir (Advanced)
+              </span>
+            </div>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-white">Pelayanan Prima & Public Speaking</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Komunikasi bisnis, Personality Development, koordinasi vendor, dan pelayanan pelanggan.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-1 text-accent text-xs font-medium">
+            <i class="fa-solid fa-circle-check"></i> Pelatihan Certified Growth Indonesia
+          </div>
+        </div>
+
+        <!-- Skill Item 7: Teamwork & Adaptability -->
+        <div class="skill-card soft p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                Ahli (Expert)
+              </span>
+            </div>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-white">Teamwork & Adaptability</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Kerja sama tim profesional, koordinasi pengawas lapangan, dan fleksibilitas kerja.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-1 text-emerald-500 text-xs font-medium">
+            <i class="fa-solid fa-circle-check"></i> Pengalaman Industri PLN
+          </div>
+        </div>
+
+        <!-- Skill Item 8: Teknis Komputer & Jaringan -->
+        <div class="skill-card tech p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-500 flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                Menengah (Intermediate)
+              </span>
+            </div>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-white">Komputer & Jaringan (TKJ)</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Pemeliharaan hardware komputer, troubleshooting jaringan dasar, dan dukungan TI kantor.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-1 text-amber-500 text-xs font-medium">
+            <i class="fa-solid fa-circle-check"></i> Latar Belakang Pendidikan SMK TKJ
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS SECTION -->
+    <section
+      id="credentials"
+      class="py-20 px-4 sm:px-8 bg-white dark:bg-navy-800/50 transition-colors"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Left: Education -->
+          <div>
+            <div class="flex items-center gap-3 mb-8">
+              <div
+                class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold"
+              >
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Pendidikan Akademis
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Riwayat Studi Formal
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="space-y-6 relative border-l-2 border-slate-200 dark:border-slate-700 pl-6 ml-4"
+            >
+              <!-- PNUP -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-accent border-4 border-white dark:border-navy-800"
+                ></div>
+                <span class="text-xs font-bold text-accent">2022 – 2026</span>
+                <h4
+                  class="text-lg font-bold text-slate-900 dark:text-white mt-1"
+                >
+                  D4 - Administrasi Bisnis
+                </h4>
+                <p
+                  class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+                >
+                  Politeknik Negeri Ujung Pandang
+                </p>
+                <div
+                  class="inline-block mt-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-xs"
+                >
+                  IPK: 3.33 / 4.00
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                  Fokus: Administrasi Perkantoran, Kesekretariatan, Tata Kelola
+                  Arsip, Korespondensi Bisnis, SIM, Pemasaran, Keuangan & SDM.
+                </p>
+              </div>
+
+              <!-- SMK -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600 border-4 border-white dark:border-navy-800"
+                ></div>
+                <span class="text-xs font-bold text-slate-400"
+                  >2019 – 2021</span
+                >
+                <h4
+                  class="text-lg font-bold text-slate-900 dark:text-white mt-1"
+                >
+                  Teknik Komputer dan Jaringan
+                </h4>
+                <p
+                  class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+                >
+                  SMK Darussalam Makassar
+                </p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                  Fokus: Dasar Perangkat Keras Komputer, Instalasi Jaringan,
+                  Hardware/Software Troubleshooting.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Certifications & Training -->
+          <div>
+            <div class="flex items-center gap-3 mb-8">
+              <div
+                class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold"
+              >
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Sertifikasi & Pelatihan
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Pengakuan Kompetensi Resmi
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Cert 1 -->
+              <div
+                class="p-5 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700 flex items-start gap-4"
+              >
+                <div
+                  class="w-10 h-10 rounded-xl bg-blue-500/10 text-accent flex-shrink-0 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-certificate text-lg"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] uppercase font-bold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded"
+                    >Berlaku s.d. Okt 2029</span
+                  >
+                  <h4
+                    class="font-bold text-slate-900 dark:text-white text-base mt-1"
+                  >
+                    Uji Kompetensi Administrasi
+                  </h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">
+                    Politeknik Negeri Ujung Pandang (PNUP)
+                  </p>
+                </div>
+              </div>
+
+              <!-- Cert 2 -->
+              <div
+                class="p-5 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700 flex items-start gap-4"
+              >
+                <div
+                  class="w-10 h-10 rounded-xl bg-blue-500/10 text-accent flex-shrink-0 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-certificate text-lg"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] uppercase font-bold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded"
+                    >Berlaku s.d. Mei 2029</span
+                  >
+                  <h4
+                    class="font-bold text-slate-900 dark:text-white text-base mt-1"
+                  >
+                    Uji Kompetensi Perkantoran & TI
+                  </h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">
+                    Universitas Dipa Makassar
+                  </p>
+                </div>
+              </div>
+
+              <!-- TOEFL -->
+              <div
+                class="p-5 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700 flex items-start gap-4"
+              >
+                <div
+                  class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex-shrink-0 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-language text-lg"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] uppercase font-bold text-slate-500 bg-slate-200 dark:bg-slate-700 px-2 py-0.5 rounded"
+                    >Sertifikat Bahasa</span
+                  >
+                  <h4
+                    class="font-bold text-slate-900 dark:text-white text-base mt-1"
+                  >
+                    Sertifikasi TOEFL
+                  </h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">
+                    The International English Center (TIEC)
+                  </p>
+                </div>
+              </div>
+
+              <!-- Training -->
+              <div
+                class="p-5 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700 flex items-start gap-4"
+              >
+                <div
+                  class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex-shrink-0 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-microphone text-lg"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] uppercase font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded"
+                    >Pelatihan Soft Skills</span
+                  >
+                  <h4
+                    class="font-bold text-slate-900 dark:text-white text-base mt-1"
+                  >
+                    Public Speaking & Personality Development
+                  </h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">
+                    Growth Indonesia (Mei 2023)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold text-accent uppercase tracking-widest mb-2"
+          >
+            Kontak
+          </h2>
+          <h3
+            class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white"
+          >
+            Mari Berhubungan
+          </h3>
+          <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+            Siap berkontribusi dan berdiskusi mengenai peluang kerja atau kerja
+            sama proyek.
+          </p>
+          <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <!-- Contact Info Cards (Left) -->
+          <div class="lg:col-span-5 space-y-4">
+            <a
+              href="mailto:aldiansyahkilian@gmail.com"
+              class="p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:border-accent transition-all flex items-center gap-5 group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-accent/10 text-accent flex items-center justify-center text-2xl group-hover:bg-accent group-hover:text-white transition-all"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-semibold uppercase">
+                  Email Pribadi
+                </p>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">
+                  aldiansyahkilian@gmail.com
+                </h4>
+                <span
+                  class="text-xs text-accent font-medium mt-0.5 inline-block"
+                  >Kirim Email Langsung &rarr;</span
+                >
+              </div>
+            </a>
+
+            <a
+              href="https://wa.me/628875269722"
+              target="_blank"
+              class="p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md hover:border-emerald-500 transition-all flex items-center gap-5 group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:text-white transition-all"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-semibold uppercase">
+                  WhatsApp / Telepon
+                </p>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">
+                  08875269722
+                </h4>
+                <span
+                  class="text-xs text-emerald-500 font-medium mt-0.5 inline-block"
+                  >Chat WhatsApp &rarr;</span
+                >
+              </div>
+            </a>
+
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 shadow-md flex items-center gap-5"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-red-500/10 text-red-500 flex items-center justify-center text-2xl"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-semibold uppercase">
+                  Alamat Domisili
+                </p>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">
+                  Jl. Bandara Lama No. 34
+                </h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Makassar, Sulawesi Selatan
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Message Form (Right) -->
+          <div class="lg:col-span-7">
+            <form
+              id="contactForm"
+              onsubmit="handleFormSubmit(event)"
+              class="bg-white dark:bg-navy-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl space-y-6"
+            >
+              <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                Kirim Pesan Cepat
+              </h4>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-2"
+                    >Nama Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    required
+                    placeholder="Nama Anda"
+                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-accent"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-2"
+                    >Alamat Email / No. HP</label
+                  >
+                  <input
+                    type="text"
+                    required
+                    placeholder="email@contoh.com"
+                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-accent"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-2"
+                  >Subjek Pesan</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="Peluang Kerja / Diskusi Proyek"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-accent"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-2"
+                  >Isi Pesan</label
+                >
+                <textarea
+                  rows="4"
+                  required
+                  placeholder="Tuliskan pesan Anda di sini..."
+                  class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-accent"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-3.5 rounded-xl bg-gradient-to-r from-accent-dark to-accent text-white font-bold text-sm shadow-lg shadow-accent/25 hover:shadow-accent/40 transition-all flex items-center justify-center gap-2"
+              >
+              <a
+                    href="mailto:aldiansyahkilian@gmail.com?subject=Pesan%20dari%20Website%20Portofolio&body=Halo%20Aldiansyah,%20saya%20tertarik%20dengan%20portofolio%20Anda."
+                    class="w-full py-3.5 rounded-xl bg-gradient-to-r from-accent-dark to-accent text-white font-bold text-sm shadow-lg shadow-accent/25 hover:shadow-accent/40 transition-all flex items-center justify-center gap-2 text-decoration-none"
+              >
+                <i class="fa-solid fa-paper-plane"></i> Kirim
+                </a>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-slate-900 text-white py-12 px-4 sm:px-8 border-t border-slate-800"
+    >
+      <div
+        class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left"
+      >
+        <div>
+          <h4 class="font-bold text-lg">MUH ALDIANSYAH KILIAN</h4>
+          <p class="text-xs text-slate-400 mt-1">
+            D4 Administrasi Bisnis | Politeknik Negeri Ujung Pandang
+          </p>
+        </div>
+
+        <div class="text-xs text-slate-500">
+          &copy; 2026 Muh Aldiansyah Kilian. All Rights Reserved.
+        </div>
+
+        <div class="flex items-center gap-4 text-lg">
+          <a
+            href="mailto:aldiansyahkilian@gmail.com"
+            class="w-9 h-9 rounded-full bg-slate-800 hover:bg-accent flex items-center justify-center transition-colors"
+          >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a
+            href="https://wa.me/628875269722"
+            target="_blank"
+            class="w-9 h-9 rounded-full bg-slate-800 hover:bg-emerald-500 flex items-center justify-center transition-colors"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button
+      id="backToTop"
+      onclick="scrollToTop()"
+      class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-accent text-white shadow-xl flex items-center justify-center text-lg opacity-0 pointer-events-none transition-all duration-300 z-50 hover:bg-accent-dark"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- PROJECT DETAIL MODAL -->
+    <div
+      id="projectModal"
+      class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-white dark:bg-navy-800 rounded-3xl max-w-2xl w-full p-8 border border-slate-200 dark:border-slate-700 shadow-2xl relative max-h-[90vh] overflow-y-auto"
+      >
+        <button
+          onclick="closeProjectModal()"
+          class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 dark:hover:text-white text-xl"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <span
+          class="inline-block px-3 py-1 rounded-md bg-accent/10 text-accent font-bold text-xs mb-3"
+          >Rincian Tugas Akhir</span
+        >
+        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+          Sistem Informasi Berbasis Website Masjid Darul Muflihin
+        </h3>
+
+        <div class="space-y-4 text-slate-600 dark:text-slate-300 text-sm">
+          <p>
+            <b>Lokasi Studi Kasus:</b> Nusa Tamalanrea Indah (NTI), Makassar.
+          </p>
+          <p>
+            Tugas akhir ini berfokus pada efisiensi tata kelola pengurus masjid
+            dalam menyampaikan informasi publik dan mengelola sistem keuangan
+            donasi secara akuntabel.
+          </p>
+
+          <h4 class="font-bold text-slate-900 dark:text-white pt-2">
+            Modul Utama Website:
+          </h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>
+              <b>Publikasi Berita & Pengumuman:</b> Update kegiatan keagamaan
+              masyarakat secara real-time.
+            </li>
+            <li>
+              <b>Penjadwalan Kegiatan:</b> Kalender otomatis untuk jadwal ibadah
+              & pengajian rutin.
+            </li>
+            <li>
+              <b>Galeri Dokumentasi:</b> Pengarsipan foto & dokumentasi acara.
+            </li>
+            <li>
+              <b>Pencatatan Donasi & Infaq:</b> Modul input donatur & riwayat
+              dana masuk.
+            </li>
+            <li>
+              <b>Laporan Keuangan Transparan:</b> Rekapitulasi laporan pemasukan
+              & pengeluaran yang dapat diakses publik.
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="mt-8 pt-4 border-t border-slate-200 dark:border-slate-700 text-right"
+        >
+          <button
+            onclick="closeProjectModal()"
+            class="px-5 py-2.5 rounded-xl bg-slate-200 dark:bg-navy-900 font-semibold text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-300"
+          >
+            Tutup Rincian
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+      // Theme Switcher Logic
+      const htmlElem = document.documentElement;
+      const themeToggleBtn = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+
+      // Default to dark mode
+      if (localStorage.getItem("theme") === "light") {
+        htmlElem.classList.remove("dark");
+        themeIcon.className = "fa-solid fa-sun";
+      } else {
+        htmlElem.classList.add("dark");
+        themeIcon.className = "fa-solid fa-moon";
+      }
+
+      themeToggleBtn.addEventListener("click", () => {
+        if (htmlElem.classList.contains("dark")) {
+          htmlElem.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+          themeIcon.className = "fa-solid fa-sun";
+        } else {
+          htmlElem.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+          themeIcon.className = "fa-solid fa-moon";
+        }
+      });
+
+      // Mobile Menu Logic
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Typing Effect Logic
+      const phrases = [
+        "Administrasi Perkantoran Modern",
+        "Spreadsheet & Data Entry Specialist",
+        "Electronic Filing System Expert",
+        "Sistem Informasi Perkantoran",
+      ];
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typingElem = document.getElementById("typingText");
+
+      function typeEffect() {
+        const currentPhrase = phrases[phraseIndex];
+        if (isDeleting) {
+          typingElem.textContent = currentPhrase.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          typingElem.textContent = currentPhrase.substring(0, charIndex + 1);
+          charIndex++;
+        }
+
+        let speed = isDeleting ? 40 : 80;
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+          speed = 2000; // Pause at end of word
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          speed = 500;
+        }
+
+        setTimeout(typeEffect, speed);
+      }
+
+      window.onload = function () {
+        typeEffect();
+      };
+
+      // Scroll Navbar & Back-to-Top Handler
+      const navbar = document.getElementById("navbar");
+      const backToTopBtn = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+          backToTopBtn.classList.add("opacity-100");
+        } else {
+          backToTopBtn.classList.add("opacity-0", "pointer-events-none");
+          backToTopBtn.classList.remove("opacity-100");
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Skills Filter Logic
+      function filterSkills(category) {
+        const cards = document.querySelectorAll(".skill-card");
+        const buttons = document.querySelectorAll(".skill-tab-btn");
+
+        buttons.forEach((btn) => {
+          btn.classList.remove("bg-accent", "text-white");
+          btn.classList.add(
+            "bg-slate-200",
+            "dark:bg-navy-800",
+            "text-slate-700",
+            "dark:text-slate-300",
+          );
+        });
+
+        event.target.classList.remove(
+          "bg-slate-200",
+          "dark:bg-navy-800",
+          "text-slate-700",
+          "dark:text-slate-300",
+        );
+        event.target.classList.add("bg-accent", "text-white");
+
+        cards.forEach((card) => {
+          if (category === "all" || card.classList.contains(category)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      // Project Modal Logic
+      function openProjectModal() {
+        document.getElementById("projectModal").classList.remove("hidden");
+      }
+
+      function closeProjectModal() {
+        document.getElementById("projectModal").classList.add("hidden");
+      }
+
+      // Form Submit Handler
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        alert(
+          "Terima kasih! Pesan Anda telah siap dikirimkan melalui aplikasi email default Anda.",
+        );
+        window.location.href =
+          "mailto:aldiansyahkilian@gmail.com?subject=Portofolio%20Inquiry";
+      }
+
+      // Simulate Download CV
+      function downloadCV() {
+        alert("Menyiapkan dokumen ringkasan CV Muh Aldiansyah Kilian...");
+      }
+    </script>
+  </body>
+</html>
